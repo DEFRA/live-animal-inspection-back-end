@@ -1,5 +1,6 @@
 import { health } from '~/src/api/health'
 import { example } from '~/src/api/example'
+import { siteData } from '~/src/api/configuration'
 
 const router = {
   plugin: {
@@ -10,6 +11,7 @@ const router = {
 
       // Application specific routes, add your own routes here.
       await server.register([example])
+      await server.register([siteData])
     }
   }
 }
