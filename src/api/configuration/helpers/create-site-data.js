@@ -12,8 +12,8 @@ async function createSiteData(db) {
             ShedDisplayName: 'Shed C: Small animals',
             Operations: true,
             Bays: [
-              { BayId: 1001, BayName: 'Bay 1', Operational: true },
-              { BayId: 1002, BayName: 'Bay 2', Operational: false }
+              { BayId: 1, BayName: 'Bay 1', Operational: true },
+              { BayId: 2, BayName: 'Bay 2', Operational: false }
             ]
           },
           {
@@ -21,14 +21,14 @@ async function createSiteData(db) {
             ShedName: 'Shed D',
             ShedDisplayName: 'Shed D: Equine',
             Operations: false,
-            Bays: [{ BayId: 1003, BayName: 'Bay 3', Operational: true }]
+            Bays: [{ BayId: 3, BayName: 'Bay 3', Operational: true }]
           },
           {
-            ShedId: 102,
+            ShedId: 3,
             ShedName: 'Shed E',
             ShedDisplayName: 'Shed E: Livestock',
             Operations: false,
-            Bays: [{ BayId: 1003, BayName: 'Bay 4', Operational: true }]
+            Bays: [{ BayId: 4, BayName: 'Bay 4', Operational: true }]
           }
         ]
       }
