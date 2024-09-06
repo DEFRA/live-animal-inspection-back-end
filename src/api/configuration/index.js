@@ -1,6 +1,8 @@
 import {
   createSiteDataController,
-  deleteSiteDataController
+  deleteSiteDataController,
+  createShedOpeningTimingsDataController,
+  deleteShedOpeningTimingsDataController
 } from '~/src/api/configuration/controllers'
 
 const siteData = {
@@ -23,4 +25,24 @@ const siteData = {
   }
 }
 
-export { siteData }
+const shedOpeningTimingsData = {
+  plugin: {
+    name: 'shedOpeningTimingsData',
+    register: async (server) => {
+      server.route([
+        {
+          method: 'POST',
+          path: '/shedOpeningTimings',
+          ...createShedOpeningTimingsDataController
+        },
+        {
+          method: 'DELETE',
+          path: '/shedOpeningTimings',
+          ...deleteShedOpeningTimingsDataController
+        }
+      ])
+    }
+  }
+}
+
+export { siteData, shedOpeningTimingsData }
