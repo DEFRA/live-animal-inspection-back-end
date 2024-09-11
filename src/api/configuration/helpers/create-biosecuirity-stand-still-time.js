@@ -1,3 +1,5 @@
+import { createLogger } from '~/src/helpers/logging/logger'
+const logger = createLogger()
 async function createBiosecuirityStandStillTimeData(db) {
   try {
     const biosecuirityStandStillTimeData = [
@@ -93,7 +95,9 @@ async function createBiosecuirityStandStillTimeData(db) {
       .collection('BiosecuirityStandStillTime')
       .insertMany(biosecuirityStandStillTimeData)
     return result
-  } catch (err) {}
+  } catch (err) {
+    logger.info(`Biosecuirity stand still insert error: ${err}`)
+  }
 }
 
 export { createBiosecuirityStandStillTimeData }

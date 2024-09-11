@@ -1,3 +1,6 @@
+import { createLogger } from '~/src/helpers/logging/logger'
+const logger = createLogger()
+
 async function createInspectionLengthsData(db) {
   try {
     const inspectionLengthsData = [
@@ -161,7 +164,9 @@ async function createInspectionLengthsData(db) {
       .collection('InspectionLengths')
       .insertMany(inspectionLengthsData)
     return result
-  } catch (err) {}
+  } catch (err) {
+    logger.info(`Inspection length data insert error: ${err}`)
+  }
 }
 
 export { createInspectionLengthsData }

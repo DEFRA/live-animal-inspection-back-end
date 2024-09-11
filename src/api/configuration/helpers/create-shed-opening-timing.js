@@ -1,3 +1,6 @@
+import { createLogger } from '~/src/helpers/logging/logger'
+const logger = createLogger()
+
 async function createShedOpeningTimingData(db) {
   try {
     const shedOpeningTimingsData = [
@@ -28,7 +31,9 @@ async function createShedOpeningTimingData(db) {
       .collection('ShedOpeningTimings')
       .insertMany(shedOpeningTimingsData)
     return result
-  } catch (err) {}
+  } catch (err) {
+    logger.info(`Shed opening timings data insert error: ${err}`)
+  }
 }
 
 export { createShedOpeningTimingData }

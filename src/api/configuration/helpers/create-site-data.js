@@ -1,3 +1,6 @@
+import { createLogger } from '~/src/helpers/logging/logger'
+const logger = createLogger()
+
 async function createSiteData(db) {
   try {
     const sites = [
@@ -48,7 +51,9 @@ async function createSiteData(db) {
 
     const result = await db.collection('Site').insertMany(sites)
     return result
-  } catch (err) {}
+  } catch (err) {
+    logger.info(`Site data insert error: ${err}`)
+  }
 }
 
 export { createSiteData }
