@@ -3,7 +3,8 @@ import { example } from '~/src/api/example'
 import {
   siteData,
   shedOpeningTimingsData,
-  inspectionLengthsData
+  inspectionLengthsData,
+  bioSecuirityStandStillTimeData
 } from '~/src/api/configuration'
 
 const router = {
@@ -18,6 +19,7 @@ const router = {
       await server.register([siteData])
       await server.register([shedOpeningTimingsData])
       await server.register([inspectionLengthsData])
+      await server.register([bioSecuirityStandStillTimeData])
     }
   }
 }

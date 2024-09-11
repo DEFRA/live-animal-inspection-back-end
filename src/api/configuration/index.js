@@ -4,7 +4,9 @@ import {
   createShedOpeningTimingsDataController,
   deleteShedOpeningTimingsDataController,
   createInspectionLengthsDataController,
-  deleteInspectionLengthsDataController
+  deleteInspectionLengthsDataController,
+  createBiosecuirityStandStillTimeDataController,
+  deleteBiosecuirityStandStillTimeDataController
 } from '~/src/api/configuration/controllers'
 
 const siteData = {
@@ -67,4 +69,28 @@ const inspectionLengthsData = {
   }
 }
 
-export { siteData, shedOpeningTimingsData, inspectionLengthsData }
+const bioSecuirityStandStillTimeData = {
+  plugin: {
+    name: 'bioSecuirityStandStillTimeData',
+    register: async (server) => {
+      server.route([
+        {
+          method: 'POST',
+          path: '/bioSecuirityStandStillTimeData',
+          ...createBiosecuirityStandStillTimeDataController
+        },
+        {
+          method: 'DELETE',
+          path: '/bioSecuirityStandStillTimeData',
+          ...deleteBiosecuirityStandStillTimeDataController
+        }
+      ])
+    }
+  }
+}
+export {
+  siteData,
+  shedOpeningTimingsData,
+  inspectionLengthsData,
+  bioSecuirityStandStillTimeData
+}
