@@ -6,6 +6,7 @@ import {
   inspectionLengthsData,
   bioSecuirityStandStillTimeData
 } from '~/src/api/configuration'
+import { shedData } from '~/src/api/shed'
 
 const router = {
   plugin: {
@@ -20,6 +21,7 @@ const router = {
       await server.register([shedOpeningTimingsData])
       await server.register([inspectionLengthsData])
       await server.register([bioSecuirityStandStillTimeData])
+      await server.register([shedData])
     }
   }
 }
