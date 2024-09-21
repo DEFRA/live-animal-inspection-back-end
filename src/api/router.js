@@ -1,5 +1,4 @@
 import { health } from '~/src/api/health'
-import { example } from '~/src/api/example'
 import {
   siteData,
   shedOpeningTimingsData,
@@ -16,7 +15,6 @@ const router = {
       await server.register([health])
 
       // Application specific routes, add your own routes here.
-      await server.register([example])
       await server.register([siteData])
       await server.register([shedOpeningTimingsData])
       await server.register([inspectionLengthsData])
