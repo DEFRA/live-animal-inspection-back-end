@@ -1,3 +1,5 @@
+import { deleteInspectionLengthsData } from '~/src/api/configuration/helpers/delete-inspection-lengths'
+
 const mockDb = {
   collection: jest.fn().mockReturnThis(),
   drop: jest.fn()
@@ -5,8 +7,7 @@ const mockDb = {
 
 describe('deleteInspectionLengthsData', () => {
   it('should call drop on the InspectionLengths collection', async () => {
-    // Mocking the behavior without calling deleteInspectionLengthsData
-    await mockDb.collection('InspectionLengths').drop()
+    await deleteInspectionLengthsData(mockDb)
 
     expect(mockDb.collection).toHaveBeenCalledWith('InspectionLengths')
     expect(mockDb.drop).toHaveBeenCalled()

@@ -1,3 +1,5 @@
+import { deleteShedOpeningTimingData } from '~/src/api/configuration/helpers/delete-shed-opening-timing'
+
 const mockDb = {
   collection: jest.fn().mockReturnThis(),
   drop: jest.fn()
@@ -5,8 +7,7 @@ const mockDb = {
 
 describe('deleteShedOpeningTimingData', () => {
   it('should call drop on the ShedOpeningTimings collection', async () => {
-    // Mocking the behavior without calling deleteShedOpeningTimingData
-    await mockDb.collection('ShedOpeningTimings').drop()
+    await deleteShedOpeningTimingData(mockDb)
 
     expect(mockDb.collection).toHaveBeenCalledWith('ShedOpeningTimings')
     expect(mockDb.drop).toHaveBeenCalled()
