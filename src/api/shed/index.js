@@ -1,4 +1,7 @@
-import { getShedOpeningTimingController } from '~/src/api/shed/controllers'
+import {
+  getShedOpeningTimingController,
+  updateShedOpeningTimingController
+} from '~/src/api/shed/controllers'
 
 const shedData = {
   plugin: {
@@ -9,6 +12,11 @@ const shedData = {
           method: 'GET',
           path: '/shedOpeningTimingBySiteId/{siteId}',
           ...getShedOpeningTimingController
+        },
+        {
+          method: 'POST',
+          path: '/updateShedOpeningTimingById',
+          ...updateShedOpeningTimingController
         }
       ])
     }
