@@ -6,6 +6,8 @@ async function createInspectionLengthsData(db) {
     const inspectionLengthsData = [
       {
         ShedId: 'Shed1',
+        SiteId: 1,
+        ShedName: 'Shed C: Small animals',
         AnimalType: 'Captive birds',
         Marshalling: 30,
         Unloading: 30,
@@ -15,6 +17,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed1',
+        SiteId: 1,
+        ShedName: 'Shed C: Small animals',
         AnimalType: 'Cats',
         Marshalling: 110,
         Unloading: 85,
@@ -24,6 +28,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed1',
+        SiteId: 1,
+        ShedName: 'Shed C: Small animals',
         AnimalType: 'Dogs',
         Marshalling: 130,
         Unloading: 100,
@@ -33,6 +39,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed1',
+        SiteId: 1,
+        ShedName: 'Shed C: Small animals',
         AnimalType: 'Ferrets',
         Marshalling: 140,
         Unloading: 95,
@@ -42,6 +50,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed1',
+        SiteId: 1,
+        ShedName: 'Shed C: Small animals',
         AnimalType: 'Live fish',
         Marshalling: 100,
         Unloading: 85,
@@ -51,6 +61,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed1',
+        SiteId: 1,
+        ShedName: 'Shed C: Small animals',
         AnimalType: 'Aquatics',
         Marshalling: 125,
         Unloading: 90,
@@ -60,6 +72,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed1',
+        SiteId: 1,
+        ShedName: 'Shed C: Small animals',
         AnimalType: 'Monkeys',
         Marshalling: 125,
         Unloading: 90,
@@ -69,6 +83,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed2',
+        SiteId: 1,
+        ShedName: 'Shed D: Equine',
         AnimalType: 'Equidae',
         Marshalling: 140,
         Unloading: 95,
@@ -78,6 +94,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed2',
+        SiteId: 1,
+        ShedName: 'Shed D: Equine',
         AnimalType: 'Ungulates - Camelids',
         Marshalling: 100,
         Unloading: 85,
@@ -87,6 +105,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed2',
+        SiteId: 1,
+        ShedName: 'Shed D: Equine',
         AnimalType: 'Ungulates - Alpacas',
         Marshalling: 125,
         Unloading: 90,
@@ -96,6 +116,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed2',
+        SiteId: 1,
+        ShedName: 'Shed D: Equine',
         AnimalType: 'Ungulates - Deer',
         Marshalling: 125,
         Unloading: 90,
@@ -106,6 +128,8 @@ async function createInspectionLengthsData(db) {
 
       {
         ShedId: 'Shed3',
+        SiteId: 1,
+        ShedName: 'Shed E: Livestock',
         AnimalType: 'Cattle',
         Marshalling: 125,
         Unloading: 90,
@@ -115,6 +139,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed3',
+        SiteId: 1,
+        ShedName: 'Shed E: Livestock',
         AnimalType: 'Farmed livestock - bison',
         Marshalling: 125,
         Unloading: 90,
@@ -124,6 +150,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed3',
+        SiteId: 1,
+        ShedName: 'Shed E: Livestock',
         AnimalType: 'Farmed livestock - sheep',
         Marshalling: 140,
         Unloading: 95,
@@ -133,6 +161,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed3',
+        SiteId: 1,
+        ShedName: 'Shed E: Livestock',
         AnimalType: 'Farmed livestock - goats',
         Marshalling: 100,
         Unloading: 85,
@@ -142,6 +172,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed3',
+        SiteId: 1,
+        ShedName: 'Shed E: Livestock',
         AnimalType: 'Farmed livestock - pigs',
         Marshalling: 125,
         Unloading: 90,
@@ -151,6 +183,8 @@ async function createInspectionLengthsData(db) {
       },
       {
         ShedId: 'Shed3',
+        SiteId: 1,
+        ShedName: 'Shed E: Livestock',
         AnimalType: 'Farmed livestock - wild boar',
         Marshalling: 125,
         Unloading: 90,
